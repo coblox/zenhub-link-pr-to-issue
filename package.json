@@ -1,0 +1,31 @@
+{
+  "name": "zenhub-link-pr-to-issue",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Create ZenHub link between pull request and issue based on the branch prefix",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write **/*.ts",
+    "format-check": "prettier --check **/*.ts",
+    "pack": "ncc build",
+    "all": "yarn run build && yarn run format && yarn run pack"
+  },
+  "author": "CoBloX Team",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^2.0.1",
+    "axios": "^0.19.2"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.12",
+    "@typescript-eslint/parser": "^2.8.0",
+    "@zeit/ncc": "^0.20.5",
+    "eslint": "^5.16.0",
+    "eslint-plugin-github": "^2.0.0",
+    "js-yaml": "^3.13.1",
+    "prettier": "^1.19.1",
+    "typescript": "^3.6.4"
+  }
+}
