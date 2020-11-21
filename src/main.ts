@@ -15,7 +15,7 @@ async function run(): Promise<void> {
       return
     }
 
-    const issueNumber: string = branchName.substring(0, branchName.indexOf('-'))
+    const issueNumber: string = branchName.substring(branchPrefix.length, branchName.indexOf('-'))
     core.debug(`Issue number: ${issueNumber}`)
 
     const prNumber: number = context.payload.pull_request!.number
