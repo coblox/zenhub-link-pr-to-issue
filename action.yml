@@ -8,6 +8,9 @@ inputs:
   ZENHUB_TOKEN:
     description: 'A ZenHub API token'
     required: true
+  BRANCH_PREFIX:
+    description: 'A prefix for your branch names'
+    required: false
 runs:
   using: 'node12'
   main: 'dist/index.js'
